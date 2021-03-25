@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1.57em 0;
+  font: normal normal bold 4em/1em Degular-Display;
+  color: #010101;
+}
+
+h2 {
+  font: normal normal bold 3em/1em Degular-Display;
+}
+
+h4 {
+  font: normal normal bold 1.5em/1em Degular-Display;
+}
+
+p {
+  font: normal normal normal 1.5em/1em Degular-Text;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container {
+  text-align: center;
+}
+
+.header-container img {
+  max-width: 80%;
+}
+  
+.about {
+  min-height: 100vh;
+  background-color: #299AE7;
+  text-align: center;
+  color: #ffffff;
+}
+.about h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.about div {
+  max-width: 57.485%;
+  margin: 0 auto;
+  margin-top: -18rem;
+  padding-top: 22rem;
+  
+}
+
+.learning {
+  min-height: 100vh;
+  text-align: center;
+}
+
+.learning h2 {
+  margin-top: 5rem;
+}
+
+.flex-items {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 67.485%;
+}
+
+.flex-items img {
+  transition: 1200ms;
+}
+
+.flex-items img:hover {
+  transform: rotate(20deg);
+}
+
+.flex-items p {
+  text-align: left;
+  margin-left: 4em;
+}
+
+ul {
+  max-width: 36%;
+  margin-left: 31em;
+  text-align: left;
+}
+
+li {
+  padding: 0.538em 0;
+  border-top: 1px solid #9A9A9A;
+  font: normal normal bold 1.125em/1.438em Degular Text;
+  text-align: left;
+  list-style: none;
+
+}
+
+li:last-child {
+  border-bottom: 1px solid #9A9A9A;
+}
+
+li:hover {
+  color: rgb(255, 145, 0);
+}
+ 
+ul span {
+  float: right;
+  clear: both;
+  font: normal normal 1.125em/1.438em Degular Text;
+  color: #626262;
+}
+
+.projects {
+  background: #8B71EA;
+  text-align: center;
+}
+
+.projects h2 {
+  padding-top: 5rem;
+}
+
+.projects p {
+  margin: 0 auto 3em auto;
+  width: 57.485%;
+}
+
+.projects-container {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 80%;
+  background: #8B71EA;
+  text-align: center;
+}
+
+.project-content h4{
+  margin: 0.3em 0;
+  color: #010101;
+}
+
+.project-content p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font: normal normal normal 1em/1.313em Degular Text;
+  color: #414141;
+  text-align: left;
+}
+
+.project-content {
+  width: 15rem;
+  height: 27.57rem;
+  margin-bottom: 5rem;
+  padding: 0.5em;
+  border: 1px solid #9A9A9A;
+  background: #ffffff;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  .projects-container{
+    width: 100%;
+  }
+  .project-content {
+    width: 300px;
+  }
+}
+
+.project-content img {
+  width: 100%;
+  height: 16rem;
+}
+
+.project-content .btn {
+  z-index: -1;
+  padding: 0.34em;
+  border-top-right-radius: 5px;
+  text-decoration: none;
+  font: normal normal bold 1em/1.313em Degular Text;;
+  color: #010101;
+}
+
+.btn {
+  position: relative;
+  bottom: 1.88em;
+  background: rgb(255, 145, 0);;
+}
+
+.project-content:hover .btn {
+  z-index: 1;
+}
+  
+  /* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(53, 52, 52);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev {
+  left: 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  position: relative;
+  top: -5em;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media screen and (min-width: 900px) {
+  .next,.prev {
+    display: none;
+  }
+  .dot {
+    display: none;
+  }
+}
+
+footer {
+  margin: 0;
+  padding: 0%;
+  background: #010101;
+  color: #ffffff;
+  text-align: center;
+}
+footer .wave {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  position: relative;
+  top: -1rem;
+}
+
+footer a {
+  font: normal normal bold 1em/1.313em Degular Text;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer a img {
+  height: 1.313em;
+  color: white;
+}
+
+footer p {
+  font: normal normal bold 1em/1.313em Degular Text;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  /* header img {
+    width: 90%;
+  } */
+
+  /* header {
+    height: 70vh;
+  } */
+
+  /* .about {
+    height: 70vh;
+  } */
+
+  /* .about div {
+    top: 10rem;
+    width: 70.485%;
+  } */
+
+  .learning ul{   
+    max-width: 90%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .learning {
+    height: 90vh;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-items img {
+    width: 180px;
+    height: 180px;
+    transform: rotate(15deg);
+  }
+
+  .flex-items img:hover {
+    transform: rotate(15deg);
+  }
+
+  .flex-items p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  header {
+    height: 35vh;
+  }
+
+}
